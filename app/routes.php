@@ -36,3 +36,6 @@ Route::get('/users/del', function()
 	$ret = DB::table('users')->where('id', 1)->delete();
 	return $ret.' rows effected';
 });
+
+
+Route::resource('tweets', 'TweetsController');
